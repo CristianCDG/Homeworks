@@ -1,0 +1,26 @@
+Las funciones flecha y las funciones regulares en JavaScript tienen varias diferencias clave:
+
+Sintaxis: Las funciones regulares se definen usando la palabra clave function, mientras que las funciones flecha utilizan la sintaxis =>.
+
+// Función regular
+function iniciar() {
+  // Código
+}
+
+// Función flecha
+const iniciar = () => {
+  // Código
+}
+
+El valor de this: En las funciones regulares, this es un enlace a su propio contexto. 
+En las funciones flecha, this no tiene su propio enlace, en su lugar, this se refiere al contexto del código que contiene la función flecha.
+Uso de new: Las funciones regulares pueden ser usadas como constructores, mientras que las funciones flecha no pueden ser usadas como constructores y lanzarán un error 
+si se usan con new.
+Retorno implícito: Las funciones flecha permiten un retorno implícito cuando la función consta de una sola expresión.
+
+// Función flecha con retorno implícito
+const iniciar = param => 'Soy ' + param;
+
+Uso de arguments: Las funciones regulares tienen su propio objeto arguments, pero las funciones flecha no tienen este objeto2.
+Uso como métodos: Las funciones regulares son más adecuadas para funciones que requieren su propia palabra clave this, como los métodos en un objeto. Las funciones de flecha son 
+más adecuadas para programación funcional y devoluciones de llamada que no requieren esta palabra clave.
